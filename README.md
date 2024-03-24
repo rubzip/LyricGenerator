@@ -31,17 +31,15 @@ After that, we selected the top 100 artists more listened in English from: (/mai
 Using Genius' API we have scrapped the lyrics of the top 10 most famous songs of each artist.
 
 ```python
+import lyricsgenius
+import json 
+
 genius = lyricsgenius.Genius(CLIENT_ACCESS_TOKEN)
 
-def get_songs(artist_name, n_songs=10, t_sleep=30):
-    while True:
-        try:
-            artist = genius.search_artist(artist_name, max_songs=n_songs)
-            songs = dict()
-            for song in artist.songs:
-                songs[song.title] = song.lyrics
-            return songs
-        except Exception as f:
-            print(f)
-            time.sleep(t_sleep)
+# The next code scraps the top 3 songs of the weekend and stores data as a JSON file.
+artist_name = "The weekend"
+
+songs = get_songs(artist_name, n_songs=3)
+with open(f"data/jsons/{artist_name.replace(' ', '_')}.json", 'w') as f:
+    json.dump(songs, f)
 ```
