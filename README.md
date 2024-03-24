@@ -43,3 +43,37 @@ songs = get_songs(artist_name, n_songs=3)
 with open(f"data/jsons/{artist_name.replace(' ', '_')}.json", 'w') as f:
     json.dump(songs, f)
 ```
+
+## Data Cleaning
+For each artist we have downloaded a JSON file that contains the top 10 songs in the folder `/main/data/jsons/`.
+Songs are formatted in Genius API as: 
+´´´
+197 ContributorsTranslationsTürkçeEspañolPortuguêsΕλληνικάDeutschDusk Till Dawn Lyrics[Verse 1: ZAYN]
+Not tryna be indie
+Not tryna be cool
+Just tryna be in this
+Tell me, are you too?
+Can you feel where the wind is?
+Can you feel it through
+All of the windows
+Inside this room?
+
+[Refrain: ZAYN]
+'Cause I wanna touch you, baby
+And I wanna feel you too
+I wanna see the sun rise on your sins
+Just me and you
+
+[Pre-Chorus: ZAYN & Sia, Sia]
+Light it up, on the run
+Let's make love tonight
+Make it up, fall in love, try
+(Baby, I'm right here)
+´´´
+For making our model easier to train, we filtered non-lyrics text and we splitted songs by tags ([Verse 1: ZAYN], [Refrain: ZAYN], [Pre-Chorus: ZAYN & Sia, Sia]).
+And after that we cleaned tags as simple as possible:
+```
+[Verse 1: ZAYN] -> [Verse]
+[Refrain: ZAYN] -> [Refrain]
+[Pre-Chorus: ZAYN & Sia, Sia] -> [Pre-Chorus]
+```
