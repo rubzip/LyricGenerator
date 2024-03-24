@@ -86,7 +86,7 @@ Resulting dataframe as:
 | 5 Seconds of Summer | Ghost of You | Cleanin' up today, found that old Zeppelin shirt You wore when you ran away, and no one could feel your hurt We're too young, too dumb, to know things like love But I know better now, better now | [Verse]  |
 
 ## Data Splitting
-
+Once we have all our data correctly formated, we have splitted it to `train`, `val`, and `test`. For the `test` dataset we have selected a song per artist, so these songs are not avaliable in `train` nor `val`, and the rest of data has been randomly slitted into `train` and `val`.
 
 
 
