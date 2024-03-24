@@ -71,7 +71,7 @@ Make it up, fall in love, try
 (Baby, I'm right here)
 ```
 
-For making our model easier to train, we filtered non-lyrics text and we splitted songs by tags ([Verse 1: ZAYN], [Refrain: ZAYN], [Pre-Chorus: ZAYN & Sia, Sia]).
+For making our model easier to train, we filtered non-lyrics text and we splitted songs by tags (`[Verse 1: ZAYN]`, `[Refrain: ZAYN]`, `[Pre-Chorus: ZAYN & Sia, Sia]`).
 And after that we cleaned tags as simple as possible:
 ```
 [Verse 1: ZAYN] -> [Verse]
