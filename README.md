@@ -78,3 +78,15 @@ And after that we cleaned tags as simple as possible:
 [Refrain: ZAYN] -> [Refrain]
 [Pre-Chorus: ZAYN & Sia, Sia] -> [Pre-Chorus]
 ```
+Resulting dataframe as:
+| artist              | song         | content                                                                                                                                                                                            | tag      |
+|---------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------|
+| 5 Seconds of Summer | Ghost of You | Here I am waking up, still can't sleep on your side There's your coffee cup, the lipstick stain fades with time If I can dream long enough, you'd tell me I'd be just fine I'll be just fine       | [Verse]  |
+| 5 Seconds of Summer | Ghost of You | So I drown it out like I always do Dancing through our house with the ghost of you And I chase it down, with a shot of truth Dancing through our house with the ghost of you                       | [Chorus] |
+| 5 Seconds of Summer | Ghost of You | Cleanin' up today, found that old Zeppelin shirt You wore when you ran away, and no one could feel your hurt We're too young, too dumb, to know things like love But I know better now, better now | [Verse]  |
+
+## Data Splitting
+
+
+
+
