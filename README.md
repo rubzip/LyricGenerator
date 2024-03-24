@@ -3,6 +3,14 @@
 The goal of this project is to apply all the knowledge acquired in "Applications 1", and develop a project.
 In our case, we have decided to finetune a LLM to generate pop lyric songs. 
 
+## Getting started
+
+To reproduce the experiments and results, make sure you install all the dependencies by doing:
+
+```console
+pip install -r requirements.txt
+```
+
 ## Data Extraction
 
 We didn't find any datasets valid for our task so we decided to build it from scratch.
