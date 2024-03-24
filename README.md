@@ -5,8 +5,8 @@ In our case, we have decided to finetune a LLM to generate pop lyric songs.
 
 ## Data Extraction
 
-We didn't found any datasets valid for our task so we decided to build it from scratch.
-Data was obtained from (Genius)[https://genius.com/], if you want to reply our data extraction process you will need to obtain an API key and add `.env` file to the `/main/` folder.
+We didn't find any datasets valid for our task so we decided to build it from scratch.
+Data was obtained from (https://genius.com/)[Genius], if you want to reply our data extraction process you will need to obtain an API key and add `.env` file to the `/main/` folder.
 
 ```
 # .env file content:
@@ -27,8 +27,8 @@ CLIENT_SECRET = os.getenv("client_secret")
 CLIENT_ACCESS_TOKEN = os.getenv("client_access_token")
 ```
 
-After that we have selected the top 100 artist more listened in english from: (/main/data/100_artists_pop_english.csv)[https://github.com/rubzip/LyricGenerator/blob/main/data/100_artists_pop_english.csv].
-Using Genius' API we have scrapped the lyrics of top 10 most famous songs of each artist.
+After that, we selected the top 100 artists more listened in English from: (/main/data/100_artists_pop_english.csv)[https://github.com/rubzip/LyricGenerator/blob/main/data/100_artists_pop_english.csv].
+Using Genius' API we have scrapped the lyrics of the top 10 most famous songs of each artist.
 
 ```python
 genius = lyricsgenius.Genius(CLIENT_ACCESS_TOKEN)
