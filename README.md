@@ -1,9 +1,18 @@
 # LyricGenerator
 
-The goal of this project is to apply all the knowledge acquired in "Applications 1", and develop a project.
-In our case, we have decided to finetune a LLM to generate pop lyric songs. 
+The goal of this project is to apply all the knowledge acquired in "Applications 1" and develop a project. 
+In this project we finetune an LLM to generate the lyrics of English pop songs. We create the dataset from scratch and provide the code to reproduce each of the steps we followed:
 
-## Getting started
+* [Data Extraction](src/01_Data_Extraction.ipynb) - we use Genius' API to download 10 songs from the top 100 pop artists of the moment.
+* [Data Cleaning](src/02_Data_Cleaning.ipynb) - we preprocess and build our train, development and test datasets.
+* [Flan Finetuning](src/03_FLAN_trainer.ipynb) - we use FLAN (small) to finetune our model and adapt it to song lyric generation.
+* [T5 Finetuning](src/03_T5_trainer.ipynb) - we use T5 (small) to finetune our model and adapt it to song lyric generation.
+* [GPT Finetuning](src/03_GPT_trainer.ipynb) - we use GPT 2 to finetune our model and adapt it to song lyric generation.
+* [Metrics Evaluation](src/04_Metrics_Evaluation.ipynb) - we compute the BLEU score and the perplexity of our generated lyrics.
+* [Mistral Evaluation](src/04_Mistral_Evaluation.ipynb) - we call Mistral's API to assess our results in terms of musicality, coherence and quality.
+
+
+## 🚀 Reproducing Results
 
 To reproduce the experiments and results, make sure you install all the dependencies by doing:
 
@@ -11,10 +20,10 @@ To reproduce the experiments and results, make sure you install all the dependen
 pip install -r requirements.txt
 ```
 
-## Data Extraction
+### ✏️ Data Extraction
 
 We didn't find any datasets valid for our task so we decided to build it from scratch.
-Data was obtained from [Genius](https://genius.com/), if you want to reply our data extraction process you will need to obtain an API key and add `.env` file to the `/main/` folder.
+Data was obtained from [Genius](https://genius.com/), if you want to reply our data extraction process you will need to obtain an API key and add `.env` file to the root folder.
 
 ```
 # .env file content:
