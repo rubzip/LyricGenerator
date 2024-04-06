@@ -61,7 +61,7 @@ with open(f"data/jsons/{artist_name.replace(' ', '_')}.json", 'w') as f:
     json.dump(songs, f)
 ```
 
-## Data Cleaning
+### 🧹 Data Cleaning
 For each artist we have downloaded a JSON file that contains the top 10 songs in the folder `/main/data/jsons/`.
 Songs are formatted in Genius API as: 
 ```
@@ -102,7 +102,7 @@ Resulting dataframe as:
 | 5 Seconds of Summer | Ghost of You | So I drown it out like I always do Dancing through our house with the ghost of you And I chase it down, with a shot of truth Dancing through our house with the ghost of you                       | [Chorus] |
 | 5 Seconds of Summer | Ghost of You | Cleanin' up today, found that old Zeppelin shirt You wore when you ran away, and no one could feel your hurt We're too young, too dumb, to know things like love But I know better now, better now | [Verse]  |
 
-## Data Splitting
+### ⚙️ Data Splitting
 Once we have all our data correctly formated, we have splitted it to `train`, `val`, and `test`. For the `test` dataset we have selected a song per artist, so these songs are not avaliable in `train` nor `val`, and the rest of data has been randomly slitted into `train` and `val`.
 
 
